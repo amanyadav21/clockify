@@ -1,5 +1,4 @@
 // Function to update the clock based on selected timezone
-// Function to update the clock based on selected timezone
 function updateClock() {
     const now = new Date();
     const timeZone = document.getElementById('timezone').value || Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -22,12 +21,33 @@ function updateClock() {
 function populateTimeZones() {
     const timeZoneSelect = document.getElementById('timezone');
     const timeZones = [
-        'Asia/Kolkata', // India
-        'Asia/Dubai',   // Dubai
-        'America/New_York', // New York
+        'Asia/Kolkata',       // India
+        'Asia/Dubai',         // Dubai
+        'America/New_York',   // New York
         'America/Los_Angeles', // Los Angeles
-        'Asia/Tokyo',   // Tokyo (Asia)
-        'Europe/Moscow' // Moscow (Russia)
+        'Asia/Tokyo',         // Tokyo (Asia)
+        'Europe/Moscow',      // Moscow (Russia)
+        'Europe/London',      // London (UK)
+        'Europe/Berlin',      // Berlin (Germany)
+        'Europe/Paris',       // Paris (France)
+        'Europe/Rome',        // Rome (Italy)
+        'Australia/Sydney',   // Sydney (Australia)
+        'Asia/Shanghai',      // Shanghai (China)
+        'Asia/Hong_Kong',     // Hong Kong
+        'Asia/Singapore',     // Singapore
+        'America/Toronto',    // Toronto (Canada)
+        'America/Mexico_City', // Mexico City (Mexico)
+        'America/Chicago',    // Chicago (USA)
+        'Africa/Johannesburg', // Johannesburg (South Africa)
+        'Asia/Jakarta',       // Jakarta (Indonesia)
+        'America/Sao_Paulo',  // São Paulo (Brazil)
+        'America/Argentina/Buenos_Aires', // Buenos Aires (Argentina)
+        'Asia/Seoul',         // Seoul (South Korea)
+        'Pacific/Auckland',   // Auckland (New Zealand)
+        'Europe/Amsterdam',   // Amsterdam (Netherlands)
+        'Europe/Madrid',      // Madrid (Spain)
+        'Asia/Bangkok',       // Bangkok (Thailand)
+        'Asia/Karachi',       // Karachi (Pakistan)
     ];
 
     timeZones.forEach(zone => {

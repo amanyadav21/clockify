@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     /* font-family: "Space Grotesk", sans-serif; */
-    font-family: "Poppins", sans-serif;
-
+    /* font-family: "Poppins", sans-serif; */
+    /* font-family: "Quicksand", sans-serif; */
+    font-family: "Telex", sans-serif;
 }
 
 .settings {
@@ -36,6 +37,11 @@
     border: 1.5px solid white;
     border-radius:  2px;
     cursor: pointer;
+}
+
+.none {
+    /* font-style: italic; */
+    /* text-decoration: underline 1px solid yellow; */
 }
 
 #colorPicker:hover {
