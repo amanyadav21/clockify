@@ -62,7 +62,7 @@ function populateTimeZones() {
 
 // Color picker functionality
 document.getElementById('colorPicker').addEventListener('input', function() {
-    document.querySelector('.section').style.color = this.value;
+    document.getElementById('digitalClock').style.color = this.value;
 });
 
 // Initialize
