@@ -102,6 +102,23 @@ body {
         left: 10px;
         top: 10px;
         font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .section {
+        font-size: 2rem;
+    }
+
+    #ampm {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+}
+
+/* Small devices (phones, 375px and up) */
+@media only screen and (min-width: 375px) {
+    .settings {
+        font-size: 0.9rem;
     }
 
     .section {
@@ -114,10 +131,10 @@ body {
     }
 }
 
-/* Small devices (phones, 375px and up) */
-@media only screen and (min-width: 375px) {
+/* Small devices (phones, 425px and up) */
+@media only screen and (min-width: 425px) {
     .settings {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .section {
@@ -130,28 +147,13 @@ body {
     }
 }
 
-/* Small devices (phones, 425px and up) */
-@media only screen and (min-width: 425px) {
-    .settings {
-        font-size: 1rem;
-    }
-
-    .section {
-        font-size: 3.5rem;
-    }
-
-    #ampm {
-        font-size: 1.8rem;
-        margin-left: 12px;
-    }
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .settings {
         flex-direction: row;
         align-items: center;
         font-size: 1rem;
+        padding: 10px 15px;
     }
 
     .section {
