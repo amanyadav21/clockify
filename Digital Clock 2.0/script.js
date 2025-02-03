@@ -2,14 +2,11 @@
 function updateClock() {
     const now = new Date();
     const timeZone = document.getElementById('timezone').value || Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const options = { hour12: true, timeZone };
+    const options = { hour12: true, timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' };
 
-    let hours = new Intl.DateTimeFormat('en-US', { hour: '2-digit', ...options }).format(now);
-    let minutes = new Intl.DateTimeFormat('en-US', { minute: '2-digit', ...options }).format(now);
-    let seconds = new Intl.DateTimeFormat('en-US', { second: '2-digit', ...options }).format(now);
-    let ampm = hours.includes("PM") ? "PM" : "AM";
-
-    hours = hours.replace(/[APM]/g, "").trim();
+    const timeString = new Intl.DateTimeFormat('en-US', options).format(now);
+    const [time, ampm] = timeString.split(' ');
+    const [hours, minutes, seconds] = time.split(':');
 
     document.getElementById("hours").textContent = hours;
     document.getElementById("minutes").textContent = minutes;
@@ -53,7 +50,7 @@ function populateTimeZones() {
     timeZones.forEach(zone => {
         const option = document.createElement('option');
         option.value = zone;
-        option.textContent = zone.replace('_', ' ');
+        option.textContent = zone.replace(/_/g, ' ');
         timeZoneSelect.appendChild(option);
     });
 
@@ -62,7 +59,10 @@ function populateTimeZones() {
 
 // Color picker functionality
 document.getElementById('colorPicker').addEventListener('input', function() {
-    document.getElementById('digitalClock').style.color = this.value;
+    const clockElements = document.querySelectorAll('.section h1');
+    clockElements.forEach(element => {
+        element.style.color = this.value;
+    });
 });
 
 // Initialize
