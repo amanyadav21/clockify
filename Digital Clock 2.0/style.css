@@ -47,9 +47,9 @@ body {
 }
 
 #colorPicker {
-    width: 40px;
-    height: 30px;
-    border: 2px solid rgb(214, 214, 214);
+    width: 50px;
+    height: 28px;
+    /* border: 2px solid rgb(214, 214, 214); */
     border-radius: 5px;
     cursor: pointer;
     appearance: none;
