@@ -49,7 +49,7 @@ body {
 #colorPicker {
     width: 40px;
     height: 30px;
-    border: 1.5px solid white;
+    border: 2px solid rgb(214, 214, 214);
     border-radius: 5px;
     cursor: pointer;
     appearance: none;
