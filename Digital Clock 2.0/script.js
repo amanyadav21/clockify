@@ -14,37 +14,47 @@ function updateClock() {
     document.getElementById("ampm").textContent = ampm;
 }
 
-// Function to populate specific time zones in the dropdown
 function populateTimeZones() {
     const timeZoneSelect = document.getElementById('timezone');
     const timeZones = [
-        'Asia/Kolkata',       // India
-        'Asia/Dubai',         // Dubai
-        'America/New_York',   // New York
-        'America/Los_Angeles', // Los Angeles
-        'Asia/Tokyo',         // Tokyo (Asia)
-        'Europe/Moscow',      // Moscow (Russia)
-        'Europe/London',      // London (UK)
-        'Europe/Berlin',      // Berlin (Germany)
-        'Europe/Paris',       // Paris (France)
-        'Europe/Rome',        // Rome (Italy)
-        'Australia/Sydney',   // Sydney (Australia)
-        'Asia/Shanghai',      // Shanghai (China)
+        // North America
+        'America/New_York',   // New York, USA
+        'America/Los_Angeles', // Los Angeles, USA
+        'America/Chicago',    // Chicago, USA
+        'America/Toronto',    // Toronto, Canada
+        'America/Mexico_City', // Mexico City, Mexico
+
+        // South America
+        'America/Sao_Paulo',  // São Paulo, Brazil
+        'America/Argentina/Buenos_Aires', // Buenos Aires, Argentina
+
+        // Europe
+        'Europe/London',      // London, UK
+        'Europe/Berlin',      // Berlin, Germany
+        'Europe/Paris',       // Paris, France
+        'Europe/Moscow',      // Moscow, Russia
+        'Europe/Rome',        // Rome, Italy
+        'Europe/Amsterdam',   // Amsterdam, Netherlands
+        'Europe/Madrid',      // Madrid, Spain
+
+        // Asia
+        'Asia/Tokyo',         // Tokyo, Japan
+        'Asia/Shanghai',      // Shanghai, China
         'Asia/Hong_Kong',     // Hong Kong
         'Asia/Singapore',     // Singapore
-        'America/Toronto',    // Toronto (Canada)
-        'America/Mexico_City', // Mexico City (Mexico)
-        'America/Chicago',    // Chicago (USA)
-        'Africa/Johannesburg', // Johannesburg (South Africa)
-        'Asia/Jakarta',       // Jakarta (Indonesia)
-        'America/Sao_Paulo',  // São Paulo (Brazil)
-        'America/Argentina/Buenos_Aires', // Buenos Aires (Argentina)
-        'Asia/Seoul',         // Seoul (South Korea)
-        'Pacific/Auckland',   // Auckland (New Zealand)
-        'Europe/Amsterdam',   // Amsterdam (Netherlands)
-        'Europe/Madrid',      // Madrid (Spain)
-        'Asia/Bangkok',       // Bangkok (Thailand)
-        'Asia/Karachi',       // Karachi (Pakistan)
+        'Asia/Seoul',         // Seoul, South Korea
+        'Asia/Bangkok',       // Bangkok, Thailand
+        'Asia/Kolkata',       // Kolkata, India
+        'Asia/Karachi',       // Karachi, Pakistan
+        'Asia/Jakarta',       // Jakarta, Indonesia
+        'Asia/Dubai',         // Dubai, UAE
+
+        // Africa
+        'Africa/Johannesburg', // Johannesburg, South Africa
+
+        // Australia & Oceania
+        'Australia/Sydney',   // Sydney, Australia
+        'Pacific/Auckland',   // Auckland, New Zealand
     ];
 
     timeZones.forEach(zone => {
